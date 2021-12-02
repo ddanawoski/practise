@@ -1,0 +1,19 @@
+baseURL = 'http://example.org/'
+defaultContentLanguage = 'en'
+title = 'My New Hugo Site'
+first = 'Daniel'
+
+[language]
+  [languages.ar]
+    languagedirection = 'rtl'
+    title = 'مدونتي'
+    weight = 2
+  [languages.en]
+    title = 'My blog'
+    weight = 1
+
+[[menu.main]]
+  name= 'about'
+  identifier = 'about'
+  Permalink = '/About'
+  weight = 1

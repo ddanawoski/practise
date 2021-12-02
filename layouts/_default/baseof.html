@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    {{$testVar := "Hello this is testing"}}
+    {{if .IsHome}}
+      {{ $testVar := "This is the homepage"}}
+      {{$testVar}}
+    {{end}}
+    {{$testVar}}
+
+
+    <!-- //* {{with (.Param "description")}}
+      <h2> {{.}} </h2>
+      {{else}}
+      <h2>{{.Summary}}</h2>
+    {{end}} *// -->
+
+    {{if (isset .Params "description")}}
+      <h2>{{index .Params "description"}}</h2>
+      {{else}}
+      {{.Summary}}
+    {{end}}
+
+
+
+
+    {{.Params.omo}}
+    {{block "main" .}}
+
+
+    {{end}}
+  </body>
+</html>
