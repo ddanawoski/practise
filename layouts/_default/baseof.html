@@ -6,7 +6,7 @@
   </head>
   <body>
 
-    {{$testVar := "Hello this is testing"}}
+  <!--  {{$testVar := "Hello this is testing"}}
     {{if .IsHome}}
       {{ $testVar := "This is the homepage"}}
       {{$testVar}}
@@ -14,22 +14,25 @@
     {{$testVar}}
 
 
-    <!-- //* {{with (.Param "description")}}
+     <!--{{with (.Param "description")}}
       <h2> {{.}} </h2>
       {{else}}
       <h2>{{.Summary}}</h2>
-    {{end}} *// -->
+    {{end}}
 
     {{if (isset .Params "description")}}
       <h2>{{index .Params "description"}}</h2>
       {{else}}
       {{.Summary}}
-    {{end}}
+    {{end}} -->
+
+    <!--{{ shuffle (seq 5 6)}}
+    {{seq 5 6 | shuffle}}
+
+    {{(slice "foo" "bar" "buzz") | shuffle}}
 
 
-
-
-    {{.Params.omo}}
+    {{.Params.omo}} -->
     {{block "main" .}}
 
 

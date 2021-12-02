@@ -5,7 +5,19 @@
       oga how far omo is set up
   {{end}}
 
-  {{$address := "No. 23 Adisa Balogun, Alapere" }}
-  {{$address}}
+
+<!-- this are all the tests - I did asdfjdksa on else not working, .S
+  summary not working either -->
+ {{if (isset .Params "description")}}
+   <h2>{{index .Params "description"}}</h2>
+   {{else}}
+   <h2>asdfdsa</h2>
+ {{end}}
+
+ {{if (isset .Params "description")}}
+   <h2>{{index .Params "description"}}</h2>
+   {{else}}
+   <h2>{{.Summary}}</h2>
+ {{end}}
 
 {{end}}
